@@ -11,7 +11,7 @@
         $scope.checkIfTooMuch = function() {
             if($scope.dishes) {
                 var dishesArray = $scope.dishes.split(",");
-                dishesArray = dishesArray.filter(n => n);
+                dishesArray = dishesArray.filter(n => n.trim());
                 if(dishesArray.length == 0) {
                     $scope.message = "Please enter data first"
                 } else if(dishesArray.length <=3) {
