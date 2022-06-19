@@ -12,7 +12,9 @@
             if($scope.dishes) {
                 var dishesArray = $scope.dishes.split(",");
                 dishesArray = dishesArray.filter(n => n);
-                if(dishesArray.length <=3) {
+                if(dishesArray.length == 0) {
+                    $scope.message = "Please enter data first"
+                } else if(dishesArray.length <=3) {
                     $scope.message = "Enjoy!"
                 } else if(dishesArray.length > 3) {
                     $scope.message = "Too much!"
